@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="gbk"> 
+<title>利用flex固缩固布局</title> 
+<style>
+        *{
+            margin: 0;
+            padding-right: 0;
+        }
+        header{
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            display: flex;
+            display: -webkit-flex;
+        }
+        header div{
+            height: 200px;
+            border: 1px solid red;
+            margin: 0px 10px;
+        }
+        header div:nth-child(1){
+            width: 100px;
+        }
+        header div:nth-child(2){
+            flex:1;
+            -webkit-flex:1;
+        }
+        header div:nth-child(3){
+            width: 100px;
+        }
+
+    </style> 
+	</head> 
+	<body> 
+	<header> 
+	<div>width:100px;</div> 
+	<div>宽度自适应<%=64/1024%></div> 
+	<div>width:100px;</div> 
+	</header> 
+	</body> 
+	</html>
